@@ -1,12 +1,14 @@
+import { useState } from 'react'
 import { Header } from './Header'
 import { Subheader } from './Subheader'
 import { ListContainer } from './ListContainer'
 import { ListHeader } from './ListHeader'
 import { ItemsList } from './ItemsList'
+import { TaskForm } from './TaskForm'
 import './App.css'
 
 function App() {
-  const todoItems = [
+  const [todoItems, setTodoItems] = useState([
     {
       id: 1,
       title: 'Buy groceries',
@@ -37,12 +39,17 @@ function App() {
       description: 'Go to the gym for an hour of cardio and strength',
       status: 'pending'
     }
-  ]
+  ])
+
+  const handleAddTask = (newTask) => {
+    setTodoItems([...todoItems, newTask])
+  }
 
   return (
     <div className="app">
       <Header />
       <Subheader subtitle="Todo List Manager" />
+      <TaskForm onAddTask={handleAddTask} />
       <ListContainer>
         <ListHeader content="Todo List" />
         <ItemsList itemsList={todoItems} />
