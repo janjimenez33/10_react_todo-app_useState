@@ -1,0 +1,9 @@
+.page-header {
+  padding: 1rem;
+  text-align: center;
+}
+
+.page-header__title {
+  font-size: 2rem;
+  color: var(--color-text);
+}
