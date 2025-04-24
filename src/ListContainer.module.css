@@ -1,0 +1,33 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.todo-list {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .todo-list {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .todo-list {
+    padding: 2rem;
+    margin-top: 1.5rem;
+  }
+}

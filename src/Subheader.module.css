@@ -1,0 +1,11 @@
+.subheader {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.subheader__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
